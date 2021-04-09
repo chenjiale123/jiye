@@ -1,0 +1,14 @@
+<!--pages/objectDetail/objectDetail.wxml-->
+<view class="contain">
+
+	<view class="swiper-tab">
+		<view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">物资列表</view>
+		<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">统计</view>
+
+	</view>
+ 	<view class="{{currentTab == 0 ? 'show':'hidden'}}">
+      
+   </view>
+    	<view class="{{currentTab == 1 ? 'show':'hidden'}}">
+   </view>
+</view>

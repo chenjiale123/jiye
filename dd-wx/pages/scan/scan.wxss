@@ -1,0 +1,162 @@
+page{
+    width: 100%;
+  height: 100%;
+}
+.contain{
+  width: 100%;
+  height: 100%;
+  background: #F8F8F8
+}
+
+.home{
+width: 100%;
+height: auto;
+overflow: hidden;
+background: #fff;
+
+}
+.title{
+  width: 100%;
+  height: 80rpx;
+  padding: 0 3rpx;
+ border-bottom: 1px solid #F8F8F8;
+ box-sizing: border-box
+}
+.title>text{
+  
+font-size: 28rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: rgba(0, 0, 0, 0.4);
+line-height: 80rpx;
+margin-left: 13rpx;
+}
+
+.name{
+  width: 100%;
+  height: 96rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+   border-bottom: 1px solid #F8F8F8;
+   line-height: 96rpx
+}
+
+.name>text{
+  
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+}
+
+.name>input{
+  border: none;
+  text-align:right;
+  margin-top: 18rpx
+}
+
+.place{
+
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: rgba(25, 31, 37, 0.28);
+text-align:right
+}
+.peo{
+    width: 100%;
+  height: 96rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+   border-bottom: 1px solid #F8F8F8;
+     line-height: 96rpx
+}
+.peo>text{
+  
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+}
+.user{
+  width: 300rpx;
+  height: 500rpx;
+  background-color: #fff;
+  position: absolute;
+  right: 30rpx;
+  top: 280rpx;
+  z-index: 999999999999;
+}
+.user>.item{
+  width: 100%;
+  height: 88rpx;
+  text-align: center;
+  font-size: 34rpx;
+margin-top: 15rpx;
+}
+.info>text{
+
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;vertical-align: middle
+}
+.info>.avter{
+  width: 48rpx;
+height: 48rpx;
+border-radius: 48rpx;
+vertical-align: middle;
+margin-left: 16rpx
+}
+.into{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.foot{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* line-height: 120rpx; */
+  padding-top: 10rpx;
+  z-index: 9999999999999999999999999;
+  padding-bottom: 10rpx;
+}
+.foot>.cancel{
+  width: 45%;
+  height: 88rpx;
+  
+background: #FFFFFF;
+border-radius: 6rpx;
+border: 1px solid rgba(25, 31, 37, 0.12);
+color: #191F25;
+font-size: 34rpx;
+text-align: center;
+line-height: 88rpx
+}
+
+.foot>.save{
+  width: 45%;
+  height: 88rpx;
+  
+background: #3296FA;
+border-radius: 6rpx;
+color: #FFFFFF;
+
+font-size: 34rpx;
+text-align: center;
+line-height: 88rpx
+}

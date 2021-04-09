@@ -1,0 +1,20 @@
+<view>
+  <view class="title">{{query.tpAccountId ? '绑定账号登录' : '账户登录'}}</view>
+  <view class="title-tip">{{query.tpAccountId ? '当前尚未绑定智慧医院账号，请先进行绑定' : ''}}</view>
+  <view class="form">
+    <form onSubmit="login">
+      <view class="form-item">
+        <image class="icon" mode="scaleToFill" src="https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/2c296156f58d7aa758041dfd31dfbd67-56-56.png"/>
+        <input class="account" name="account" value="{{account}}" maxlength="11" onInput="setAccount" placeholder="请输入手机号" />
+      </view>
+      <view class="form-item">
+        <image class="icon" mode="scaleToFill" src="https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/a9213b7b1e33c057e6b0b9999c2cff61-56-56.png"/>
+        <input class="password" name="password" password="{{eyy}}" maxlength="20"  onInput="setPassword" placeholder="请输入密码" /> 
+        <image class="icon" mode="scaleToFill" onTap="tempEyy" src="{{eyyImg}}" />
+      </view>
+      <view class="input-tip">* 若忘记密码，请联系医院管理员。</view> 
+      <button class="login-btn" loading="{{loading}}" disabled="{{disabled}}" type="primary" formType="submit">{{query.tpAccountId ? '绑定账户并登录' : '登录'}}</button>
+    </form>
+  </view>
+  <view class="company-support">©远图互联 技术支持</view>
+</view>

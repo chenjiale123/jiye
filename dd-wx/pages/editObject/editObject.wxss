@@ -1,0 +1,308 @@
+page{
+    width: 100%;
+  height: 100%;
+}
+.contain{
+  width: 100%;
+  height: 100%;
+  background: #F8F8F8
+}
+
+.home{
+width: 100%;
+height: auto;
+overflow: hidden;
+background: #fff;
+margin-bottom: 120rpx;
+padding-bottom: 120rpx;
+}
+.title{
+  width: 100%;
+  height: 80rpx;
+  padding: 0 3rpx;
+ border-bottom: 1px solid #F8F8F8;
+ box-sizing: border-box
+}
+.title>text{
+  
+font-size: 28rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: rgba(0, 0, 0, 0.4);
+line-height: 80rpx;
+margin-left: 13rpx;
+}
+.name{
+  width: 100%;
+  height: 96rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+   border-bottom: 1px solid #F8F8F8;
+   line-height: 96rpx
+}
+.name1{
+    width: 100%;
+  height: 96rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden
+}
+
+.name>text{
+  
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+}
+
+.name1>text{
+  
+font-size: 28rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+display: block;
+margin-bottom: 30rpx
+}
+.name>input{
+  border: none;
+  text-align:right;
+  margin-top: 18rpx
+}
+.place{
+
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: rgba(25, 31, 37, 0.28);
+text-align:right
+}
+.way,.time{
+  width: 100%;
+  height: auto;
+  overflow: hidden
+}
+.check{
+   width: 100%;
+  height: 96rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+    display: flex;
+  justify-content: space-between;
+   /* border-bottom: 1px solid #F8F8F8; */
+   line-height: 96rpx
+}
+
+.check>text{
+  
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+}
+
+.check>image{
+  width: 16rpx;
+  height: 16rpx;
+  vertical-align: middle;
+  margin-top: 44rpx;
+}
+.group,.group1{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.checkbox{
+  width: 33.3%;
+ 
+}
+checkbox{
+  width:36rpx;
+  height: 36rpx
+}
+radio{
+   width: 36rpx;
+  height: 36rpx
+}
+.checkbox-text{
+  
+font-size: 30rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: rgba(0, 0, 0, 0.6);
+}
+.type>input{
+  width: 94%;
+  
+height: 84rpx;
+background: #FFFFFF;
+border-radius: 22rpx;
+border: 1px solid #DBDBDB;
+margin: 40rpx auto;
+padding: 0 30rpx;
+box-sizing: border-box;
+display: block
+}
+.txt{
+  
+font-size: 34rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: rgba(25, 31, 37, 0.28);
+}
+.date1{
+  margin-top: 30rpx
+}
+.date1:nth-child(1){
+  
+font-size: 28rpx;
+font-family: PingFangSC-Medium, PingFang SC;
+font-weight: 500;
+color: rgba(0, 0, 0, 0.6);
+}
+.date1:nth-child(2){
+  
+font-size: 28rpx;
+
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 500;
+color: rgba(0, 0, 0, 0.6);
+}
+.pv-left{
+  width: 94%;
+  margin: 30rpx auto;
+ padding-bottom: 90rpx;
+ height: 400rpx;
+}
+.view{
+  width: 100%;
+  height: 100%;
+}
+.date{
+  margin: 0 auto;
+  text-align: center;
+}
+.foot{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  /* line-height: 120rpx; */
+  padding-top: 10rpx;
+  z-index: 9999999999999999999999999;
+  padding-bottom: 10rpx;
+}
+.foot>.cancel{
+  width: 45%;
+  height: 88rpx;
+  
+background: #FFFFFF;
+border-radius: 6rpx;
+border: 1px solid rgba(25, 31, 37, 0.12);
+color: #191F25;
+font-size: 34rpx;
+text-align: center;
+line-height: 88rpx;
+margin-bottom: 20rpx;
+}
+
+.foot>.save{
+  width: 45%;
+  height: 88rpx;
+  
+background: #3296FA;
+border-radius: 6rpx;
+color: #FFFFFF;
+
+font-size: 34rpx;
+text-align: center;
+line-height: 88rpx;
+margin-bottom: 20rpx;
+
+}
+
+
+label.checkbox {
+
+}
+checkbox .wx-checkbox-input{
+  width: 22rpx;
+  height: 22rpx;
+}
+
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1rpx solid transparent;
+  background-color: #2F87E0;
+}
+
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  width: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  text-align: center;
+  font-size:22rpx;
+  color:#fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-group {
+  margin-top: 20px;
+  background-color: #eee;
+}
+.radio-group label {
+  display: block;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  box-sizing: border-box;
+
+}
+
+radio {
+  width: 38rpx;
+}
+
+/* 单选框未选中 */
+radio .wx-radio-input {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+}
+
+
+/* 单选框选中后对勾样式 */
+radio .wx-radio-input.wx-radio-input-checked::before{
+  border-radius: 50%;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 26rpx;   
+  color:#fff;
+  background-color: #2F87E0;
+  border-color: #2F87E0;
+}
+
+
+
+

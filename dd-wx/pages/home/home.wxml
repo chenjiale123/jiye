@@ -1,0 +1,41 @@
+<view >
+	<view class="contain">
+		<view class="include">
+			<view class="top">
+
+				<!-- <image mode="scaleToFill" src="../../image/dd.png"  class="img2"/> -->
+							  <image src="../../image/icon@2x.png" class="img1" bindtap="add"></image>
+			</view>
+			<view class="list">
+				<view class="item" wx:for="{{scean}}" wx:key="index">
+					<view class="left">
+						<image mode="scaleToFill" src="../../image/avter.png" />
+					</view>
+					<view class="right">
+						<view class="leftin">
+							<text>{{item.name}}</text>
+							<view class="obj">
+								<text>责任人：{{item.principal}}</text>
+								<button type="primary" bindtap="obj" data-id="{{item.id}}" >
+									消毒对象：{{item.doCount}}
+								</button>
+							</view>
+						</view>
+						<view class="rightin">
+							<image mode="scaleToFill" src="../../image/more.png" bindtap="clase" data-id="{{item.id}}" />
+
+							<view class="edit"  hidden="{{item.insert?'':'true'}}">
+								<text bindtap="edit" data-id="{{item.id}}" data-name="{{item.name}}" data-people="{{item.principal}}" >编辑</text>
+								<text bindtap="del" data-id="{{item.id}}" >删除</text>
+							</view>
+						</view>
+					</view>
+				</view>
+		
+			</view>
+		</view>
+		<view class="foot">
+			<!-- <text>加载更多</text> -->
+		</view>
+	</view>
+</view>

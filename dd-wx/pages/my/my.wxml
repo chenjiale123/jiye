@@ -1,0 +1,26 @@
+<view>
+
+  <view class="link-list">
+    <!-- <navigator >
+      <view class="list-item">
+   
+        <view class="item-content">打卡方式</view>
+        <image class="icon" mode="scaleToFill" src="https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/86adbf51b5a1aeeaa22835a875119dd7-56-56.png"/>
+
+           <view class="select">
+              <radio-group bindchange="radioChange" class="group">
+        <label class="weui-cell" wx:for="{{items}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked='true'/>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+         </label>
+      </radio-group>
+           
+           </view>
+      </view>
+    </navigator> -->
+   <view class="btn" bindtap="user">成员管理</view>
+      <view class="exit" bindtap="exit">退出登录</view>
+  </view>
+</view>

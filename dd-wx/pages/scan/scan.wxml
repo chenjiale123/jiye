@@ -1,0 +1,40 @@
+<view class="contain">
+
+	<view class="home">
+
+
+
+		<view class="title">
+			<text>|</text> <text>场景信息</text>
+		</view>
+
+		<view class="name">
+			<text>场景名称</text>
+
+			<input placeholder="预填" placeholder-class="place"  bindinput="scane" value="{{scane1}}"/>
+		</view>
+		<view class="peo">
+			<text>负责人</text>
+
+			<view class="info">
+				<text bindtap="showuser">{{username}}</text>
+				<!-- <image mode="scaleToFill" src="../../image/avter.png" class="avter" /> -->
+				<image mode="scaleToFill" src="../../image/inter.png" class="into"   bindtap="showuser"/>
+			</view>
+		</view>
+
+   <view class="user" wx:if="{{show}}">
+	  <view class="item" wx:for="{{userlist}}" data-id="{{item.subId}}" data-name="{{item.name}}" bindtap="select">{{item.name}}</view>
+	 </view>
+
+		<view class="foot">
+			<button type="primary" bindtap="cancel" class="cancel">
+				取消
+			</button>
+
+			<button type="primary" bindtap="save" class="save">
+				保存
+			</button>
+		</view>
+	</view>
+</view>

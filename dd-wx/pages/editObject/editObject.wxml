@@ -1,0 +1,114 @@
+<view class="contain">
+	<view class="home">
+		<view class="title">
+			<text>|</text>
+			<text>场景信息</text>
+		</view>
+		<view class="name">
+			<text>对象名称</text>
+			<input placeholder="预填" placeholder-class="place" bindinput="obj"/>
+		</view>
+		<view class="way">
+			<view class="check" bindtap="way">
+				<text>消毒方式（多选）</text>
+				<image mode="scaleToFill" src="../../image/xia.png" />
+			</view>
+			<checkbox-group bindchange="onChange" class="group" wx:if="{{show}}">
+				<label class="checkbox" wx:for="{{items}}">
+					<checkbox value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
+					<text class="checkbox-text">{{item.value}}</text>
+				</label>
+			</checkbox-group>
+		</view>
+		<view class="time" >
+			<view class="check" bindtap="time">
+				<text>作用时间</text>
+				<image mode="scaleToFill" src="../../image/xia.png" />
+			</view>
+			<radio-group bindchange="timefor" class="group1"  wx:if="{{show1}}">
+				<label class="checkbox" wx:for="{{items1}}">
+					<radio value="{{item.name}}" checked="{{item.checked}}" />
+					<text class="checkbox-text">{{item.value}}</text>
+				</label>
+			</radio-group>
+		</view>
+		<view class="type">
+			<view class="check" bindtap="type">
+				<text>消毒液（非必选）</text>
+				<image mode="scaleToFill" src="../../image/xia.png" />
+			</view>
+			<view class="name1"  wx:if="{{show2}}">
+				<text>名称</text>
+				<radio-group bindchange="typefor" class="group1">
+					<label class="checkbox" wx:for="{{items2}}">
+						<radio value="{{item.name}}" checked="{{item.checked}}" />
+						<text class="checkbox-text">{{item.value}}</text>
+					</label>
+				</radio-group>
+			</view>
+			<view class="name1"  wx:if="{{show2}}">
+				<text>原液：水比例</text>
+				<radio-group bindchange="namefor" class="group1">
+					<label class="checkbox" wx:for="{{items3}}">
+						<radio value="{{item.name}}" checked="{{item.checked}}" />
+						<text class="checkbox-text">{{item.value}}</text>
+					</label>
+				</radio-group>
+			</view>
+			<input placeholder="原液浓度（%）" placeholder-class="txt"  wx:if="{{show2}}" bindinput="liyqid" />
+		</view>
+
+
+		<view class="today">
+			<view class="check"
+			 bindtap="today">
+				<text>任务日期</text>
+				<image mode="scaleToFill" src="../../image/xia.png" />
+			</view>
+			<view class="name1" wx:if="{{show3}}">
+				<text>日期间隔</text>
+				<radio-group bindchange="datafor" class="group1">
+					<label class="checkbox" wx:for="{{items4}}">
+						<radio value="{{item.name}}" checked="{{item.checked}}" />
+						<text class="checkbox-text">{{item.value}}</text>
+					</label>
+				</radio-group>
+			</view>
+			<view class="name1"  wx:if="{{show3}}">
+				<view class="date1">
+					<text>当日截止时间</text>
+					<text>{{value}}</text>
+				</view>
+				<view class="pv-left"  wx:if="{{show3}}">
+					<picker-view value="{{value}}" bindchange="datachange" class="view">
+						<picker-view-column>
+					
+							<view class="date" wx:for="{{hour}}" wx:key='index'>{{item}}</view>
+
+						</picker-view-column>
+						<picker-view-column>
+							<view class="date" wx:for="{{time}}" wx:key='index'>{{item}}</view>
+
+						</picker-view-column>
+						<picker-view-column>
+						<view class="date" wx:for="{{danwei}}" wx:key='index'>{{item}}</view>
+					
+						</picker-view-column>
+					</picker-view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+
+
+	<view class="foot">
+		<button type="primary" bindtap="cancel" class="cancel">
+			取消
+		</button>
+
+		<button type="primary" bindtap="save" class="save">
+			保存
+		</button>
+	</view>
+</view>

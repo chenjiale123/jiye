@@ -1,0 +1,21 @@
+<!--pages/main/main.wxml-->
+<view class="contain">
+     <!-- <image src="../../image/icon@2x.png"></image> -->
+	<view class="item" wx:for="{{scean}}" bindtap="detail" data-id="{{item.id}}">
+		<view class="left">
+			<image src="../../image/avter.png"></image>
+			<view class="main">
+				<text>{{item.name}}</text>
+				<text>负责人：{{item.principal}}</text>
+			</view>
+		</view>
+    <view class="right">
+  <text>当前消毒进度  {{item.sterilizedDoCount}}/{{item.doCount}}</text>
+  <view class="when">
+   <view class="whenin" style="width:{{item.sterilizedDoCount/item.doCount}}"></view>
+  </view>
+    </view>
+
+	</view>
+
+</view>

@@ -1,0 +1,4 @@
+<view class="contain">
+  <button class="down" bindtap="user">成员管理</button>
+   <button class="exit" bindtap="exit">退出登录</button>
+</view>

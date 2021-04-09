@@ -1,0 +1,68 @@
+<view class="contain">
+
+	<view class="list">
+
+
+		<view class="item" wx:for="{{list}}">
+			<view class="title">
+				<view class="left">
+					<text>{{item.principalName}}的补卡申请</text>
+				</view>
+				<view class="right">
+					<text>{{item.principalName}}</text>
+					<image mode="scaleToFill" src="../../image/avter.png" />
+				</view>
+			</view>
+
+			<view class="center">
+				<view class="xinxi">
+					<text>场景：</text>
+					<text>{{item.sceneName}}</text>
+				</view>
+
+				<view class="xinxi">
+					<text>消毒对象：</text>
+					<text>{{item.doName}}</text>
+				</view>
+
+				<view class="xinxi">
+					<text>补卡原因：</text>
+					<text>{{item.repairReason}}</text>
+				</view>
+			</view>
+
+			<view class="fot">
+				<view class="left">
+					<text>{{item.repairDate}}</text>
+				</view>
+
+				<view class="right">
+					<button type="primary" bindtap="reject" class="noagr" data-id="{{item.docId}}">
+						驳回
+					</button>
+					<button type="primary" bindtap="agree" class="agree" data-id="{{item.docId}}">
+						同意
+					</button>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="confim" style="display:{{show}}">
+		<view class="hidden">
+			<text>驳回原因</text>
+
+			<textarea placeholder="请填写原因" placeholder-class="hh" bindinput="reason" />
+
+
+			<view class="btnlist">
+             <button type="primary" bindtap="reject1">
+             确认驳回
+             </button>
+               <button type="primary" bindtap="cancel">
+             取消/返回
+             </button>
+             </view>
+       </view>
+  </view>
+</view>

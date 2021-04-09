@@ -1,0 +1,58 @@
+<!--pages/user/user.wxml-->
+<view class="contain">
+	<image src="../../image/icon@2x.png" bindtap="add"></image>
+	<view class="item" wx:for="{{userlist}}" wx:key="index">
+		<view class="left">
+			<image src="../../image/wsls.png"></image>
+			<view class="main">
+				<text>{{item.name}}</text>
+				<text>电话：{{item.subId}}</text>
+			</view>
+		</view>
+		<view class="right">
+			<button bindtap="del" data-id="{{item.subId}}">删除</button>
+			<button bindtap="edit" data-id="{{item.subId}}" data-name="{{item.name}}">编辑</button>
+		</view>
+
+	</view>
+
+
+	<view class="confim" wx:if="{{show}}">
+		<view class="hidden" wx:if="{{!flag}}">
+			<text>旧账号</text>
+
+			<input placeholder="请填写旧账号" placeholder-class="hh" bindinput="old" maxlength="11" value="{{old1}}"></input>
+			<text>新账号</text>
+
+			<input placeholder="请填写新账号" placeholder-class="hh" bindinput="new" maxlength="11"></input>
+
+			<view class="btnlist">
+				<button type="primary" bindtap="upload">
+					确认
+				</button>
+				<button type="primary" bindtap="cancel">
+					取消/返回
+				</button>
+			</view>
+		</view>
+
+		<view class="hidden" wx:if="{{flag}}">
+			<text>姓名</text>
+
+			<input placeholder="请填写姓名" placeholder-class="hh" bindinput="name"></input>
+			<text>电话</text>
+
+			<input placeholder="请填写电话" placeholder-class="hh" bindinput="phone" maxlength="11"></input>
+
+			<view class="btnlist">
+				<button type="primary" bindtap="addmore">
+					确认
+				</button>
+				<button type="primary" bindtap="cancel">
+					取消/返回
+				</button>
+			</view>
+		</view>
+	</view>
+
+</view>

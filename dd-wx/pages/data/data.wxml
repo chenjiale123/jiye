@@ -1,0 +1,19 @@
+<!--pages/data/data.wxml-->
+<view class="contain">
+
+
+	<view class="schtype">
+		<text>数据下载</text>
+		<!-- <select id="select" options="{{options}}" key="{{item.city_id}}" text="{{item.city_name}}" bindchange="change"></select> -->
+		<view class="right">
+			<text  bindtap="showselect"  >{{name}}</text>
+			<image src="../../image/right.png" bindtap="showselect"></image>
+
+			<view class="select" wx:if="{{hidden}}">
+				<text wx:for="{{options}}" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="fix">{{item.name}}</text>
+	
+			</view>
+		</view>
+	</view>
+  <button class="down" bindtap="down">下载</button>
+  </view>

@@ -1,0 +1,102 @@
+/* pages/goods/goods.wxss */
+page{
+  width: 100%;
+  height: auto;
+  background-color: #f8f8f8;
+  overflow: auto;
+}
+.contain{
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.listitem{
+  width: 100%;
+  height: 460rpx;
+  position: relative;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+}
+.listitem>image{
+  position: absolute;
+  top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+.top{
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  position: relative;
+  align-items: center;
+}
+.top>text{
+
+  font-size: 38rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #191F25;
+  position: relative;
+}
+.top>button{
+  width: 96rpx;
+  height: 40rpx;
+  border-radius: 2px;
+  border: 1px solid #15BC83;
+  
+font-size: 20rpx;
+font-family: PingFangSC-Medium, PingFang SC;
+font-weight: 500;
+color: #15BC83;
+line-height: 40rpx;
+margin: 0!important;
+}
+.cen{
+  width: 86%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.cen>view{
+  
+font-size: 30rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+margin-top: 16rpx;
+}
+.cen>view>text{
+  
+font-size: 30rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+}
+.btnlist{
+  width: 86%;
+  margin: 0 auto;
+  height: 100rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box ;
+  z-index: 999;
+  position: relative;
+}
+.btnlist>text{
+  
+font-size: 24rpx;
+font-family: PingFangSC-Regular, PingFang SC;
+font-weight: 400;
+color: #191F25;
+
+line-height: 100rpx    ;
+}

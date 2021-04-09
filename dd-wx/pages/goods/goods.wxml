@@ -1,0 +1,21 @@
+<!--pages/goods/goods.wxml-->
+<view class="contain">
+		<view class="listitem" wx:for="{{list}}">
+				<image src="../../image/wuzibg.png"></image>
+				<view class="top">
+					<text>物资名称：{{item.name}}</text>
+		
+				</view>
+				<view class="cen">
+					<view>类型：<text>{{item.type}}</text> </view>
+					<view>数量：<text>{{item.count}}</text> </view>
+					<view>单位：<text>{{item.unit}}</text> </view>
+				</view>
+				<view class="btnlist">
+			<text>最近更新时间：{{item.updateTime}}</text>
+
+				</view>
+
+			</view>
+
+</view>

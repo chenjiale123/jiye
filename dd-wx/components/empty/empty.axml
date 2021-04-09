@@ -1,0 +1,5 @@
+<view>
+  <image mode="scaleToFill" src="{{img}}"/>
+  <view class="tip">{{tip}}</view>
+  <button type="primary" class="btn">{{btnText}}</button>
+</view>

@@ -1,0 +1,18 @@
+<view class="contain">
+  <view class="top">
+<text>{{name}}</text>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{objlist}}" wx:key="index"  data-id="{{item.id}}" bindtap="detail">
+      <view class="left"  >
+        <text>{{item.name}}</text>
+      </view>
+      <view class="right">
+        <text class="del" wx:if="{{item.state==true}}">已消毒</text>
+          <text class="del1" wx:if="{{item.state==false}}">未消毒</text>
+      </view>
+    </view>
+
+
+  </view>
+</view>

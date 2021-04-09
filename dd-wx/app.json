@@ -1,0 +1,68 @@
+{
+  "pages": [
+ 
+    "pages/login/login",
+    "pages/user/user",
+    "pages/home/home",
+    "pages/Buser/Buser",
+    "pages/main/main",
+    "pages/school/school",
+    "pages/wzDetail/wzDetail",
+    "pages/goods/goods",
+    "pages/data/data",
+    "pages/home1/home1",
+    "pages/reset-password/reset-password",
+    "pages/setting/setting",
+    "pages/my/my",
+    "pages/login-account/login-account",
+    "pages/messages1/messages1",
+    "pages/messages/messages",
+    "pages/scan/scan",
+    "pages/object/object",
+    "pages/object1/object1",
+    "pages/editObject/editObject",
+    "pages/clock/clock",
+    "pages/detail/detail",
+    "pages/objectDetail/objectDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "custom": true, 
+    "color": "#999",
+    "selectedColor": "#2582F2",
+    "backgroundColor": "#fff",
+    "list": [
+      
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/home1.png",
+        "selectedIconPath": "image/home.png"
+      },
+      {
+        "selectedIconPath": "image/xdqk.png",
+        "iconPath": "image/xdqk1.png",
+        "pagePath": "pages/main/main",
+        "text": "消毒情况"
+      }
+     
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+
+    "scope.userLocation": {
+    
+    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    
+    }
+    
+    }
+}

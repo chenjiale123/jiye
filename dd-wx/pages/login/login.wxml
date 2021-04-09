@@ -1,0 +1,41 @@
+<!--pages/home/home.wxml-->
+<view class="contain">
+     <image src="../../image/login@2x.png"></image>
+	 
+
+	 <view class="zh">
+	 <text>账号</text>
+	<input placeholder="请输入账号" class="acount" bindinput="acount" value="{{acount1}}" maxlength="11" placeholder-class="kk" bindblur="blur"></input>
+
+</view>
+
+<view class="mm">
+<text>密码</text>
+	<input placeholder="请输入密码" class="psd" bindinput="psd" value="{{psd1}}" password="{{ps}}" placeholder-class="kk"></input>
+		<image src="../../image/eyes.png" wx:if="{{eye}}" bindtap="changeye"></image>
+		<image src="../../image/eyes1.png" wx:if="{{!eye}}" bindtap="changeye1"></image>
+</view>
+	<view class="code">
+<text>验证码</text>
+		<input placeholder="验证码" class="yCode" bindinput="code" placeholder-class="kk" maxlength="4"></input>
+		<view class="img">
+		<button bindtap="again" wx:if="{{huo}}">验证码</button>
+			<image src="{{codeUrl}}" bindtap="again1" wx:if="{{!huo}}"></image>
+		</view>
+	</view>
+
+  <view class="rem">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}" wx:key="index">
+        <radio value="{{item.name}}" />{{item.value}}
+    </label>
+</radio-group>
+
+  <text bindtap="wxlogin"></text>
+  </view>
+	<button bindtap="login" class="btn">登录</button>
+
+	<!-- <button class="button" bindtap="wxlogin">  <image src="../../image/wx.png" class="btnimg"></image>
+   <text class="btntxt">微信一键登录</text>  </button > -->
+
+</view>

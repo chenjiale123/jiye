@@ -1,0 +1,50 @@
+
+	<view class="contain">
+
+   <view class="zezao" wx:if="{{xian}}" catchtouchmove="{{true}}">
+	   <view class="content">
+		 <view class="body">
+		   <view wx:for="{{backlist}}" class="listitem" >
+			 			   <text wx:if="{{item.processed==0}}">{{item.repairDate}}申请的理由为{{item.repairReason}}的申请审核中</text>
+			   <text wx:if="{{item.processed==1&&item.repairIsPass==1}}">{{item.repairDate}}申请的理由为{{item.repairReason}}的申请已通过</text>
+				 	   <text wx:if="{{item.processed==1&&item.repairIsPass==0}}">{{item.repairDate}}申请的理由为{{item.repairReason}}的申请未通过,驳回理由为{{item.notPassReason}}</text>
+			 </view>
+			 </view>
+		  <button bindtap="sure">确定</button>
+		 </view>
+	 
+	 </view>
+	  
+		<view class="include">
+	
+			<view class="list">
+					<view class="item" wx:for="{{scean}}" wx:key="index">
+					<view class="left">
+						<image mode="scaleToFill" src="../../image/avter.png" />
+					</view>
+					<view class="right">
+						<view class="leftin">
+							<text>{{item.name}}</text>
+							<view class="obj">
+								<text>责任人：{{item.principal}}</text>
+								<button type="primary" bindtap="obj" data-id="{{item.id}}" data-name="{{item.name}}">
+									消毒对象：{{item.doCount}}
+								</button>
+							</view>
+						</view>
+						<view class="rightin">
+							<!-- <image mode="scaleToFill" src="../../image/more.png" bindtap="clase" data-id="{{item.id}}" /> -->
+
+							<view class="edit"  hidden="{{item.insert?'':'true'}}">
+								<text bindtap="edit" data-id="{{item.id}}" data-name="{{item.name}}" data-people="{{item.principal}}" >编辑</text>
+								<text bindtap="del" data-id="{{item.id}}" >删除</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="foot">
+			<!-- <text>加载更多</text> -->
+		</view>
+	</view>
