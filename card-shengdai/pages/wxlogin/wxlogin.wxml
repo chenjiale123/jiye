@@ -1,0 +1,13 @@
+<!-- pages/wxlogin/wxlogin.wxml-->
+<image src="../../image/bj.jpg" class="all"></image>
+<view class="contain">
+
+
+
+
+  <view wx:if="{{!bool}}" class="button" bindtap="GetUserInfo">  <image src="../../image/wx.png" class="btnimg"></image>
+   <text class="btntxt">微信登录查看电子名片</text>  </view >
+</view>
+
+
+

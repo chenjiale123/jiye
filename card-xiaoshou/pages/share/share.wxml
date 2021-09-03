@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <image src="{{shareImage}}" class="share-image"></image>
+  <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+
+  <!-- <button bind:tap="eventDraw">绘制</button> -->
+  <button bind:tap="eventSave"> 
+
+  <image src="../../image/save.png" class="save"></image>
+    <text>保存到本地</text>
+  
+  </button>
+<!-- <image src="{{code}}"></image> -->
+
+</view>

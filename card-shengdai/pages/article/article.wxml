@@ -1,0 +1,48 @@
+<!--pages/article/article.wxml-->
+<wxs src="../../utils/filter.wxs" module="util"></wxs>
+
+<import src="article.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+
+<view class="container">
+
+
+	<view class="video" style="height: {{height*0.4}}rpx" wx:if="{{hidden}}">
+		<video show-center-play-btn='false' objectFit='cover' id="myVideo" class="videostyle" src="{{bannerlist[1].videoUrl}}" custom-cache='{{true}}' controls poster="{{bannerlist[0].resource}}" style="height: {{height*0.4}}rpx"></video> <!-- 视频-->
+		<view style="display: {{tab_image}};">
+			<!-- <cover-view class="controls pa" id="controls">
+		
+				<image src="{{bannerlist[0].resource}}" class="etc"   mode="widthFix"/>
+			</cover-view> -->
+			<!-- 中间的播放图片标志 -->
+		
+
+		</view>
+
+	</view>
+
+
+
+
+	<view class="include" style="{{style}}" id="floatMirror"   >
+		<view class="tabNav" style="width:{{navlist.length*170}}rpx">
+			<view wx:for="{{navlist}}" wx:key="index" data-id="{{item}}" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}"><text>{{item.name}}</text></view>
+		</view>
+	</view>
+
+		<view class="include" style="position: fixed;left: 0; top: 0;overflow: auto;   z-index: 10;  width: 100%;  height: 120rpx;   line-height: 110rpx;  background: #fff; border-bottom: 1px solid #f5f5f5;  box-sizing: border-box;"  wx:if="{{isShowFloat}}" >
+		<view class="tabNav" style="width:{{navlist.length*170}}rpx">
+			<view wx:for="{{navlist}}" wx:key="index" data-id="{{item}}" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}"><text>{{item.name}}</text></view>
+		</view>
+	</view>
+	<view class="orderInfo" >
+		<view class="orderInfo-item" wx:for="{{itemList}}" wx:key="index" bindtap="newsList" data-id="{{item}}">
+			<image lazy-load="true" src="{{item.image}}" mode="widthFix"></image>
+			<view  class="discrabe">
+				<!-- <text>{{util.format(item.title)}}</text>
+				<text>{{item.createTime}}</text> -->
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/wxlogin/wxlogin",
+    "pages/index/index",
+    "pages/code/code",
+    "pages/loginUser/loginUser",
+   
+    "pages/article/article",
+    "pages/share/share",
+    "pages/cardCode/cardCode",
+    "pages/word/word",
+
+    "pages/artDetail/artDetail"
+  ],
+  "tabBar": {
+  
+    "color": "#a9b7b7",
+    "selectedColor": "#3296FA",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "selectedIconPath": "image/home01@2x.png",
+        "iconPath": "image/home@2x.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/wo01@2x.png",
+        "iconPath": "image/wo@2x.png",
+        "pagePath": "pages/article/article",
+        "text": "干货"
+      }
+      
+
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+
+   },
+  "permission": {
+
+    "scope.userLocation": {
+    
+    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    
+    }
+    
+    }
+}

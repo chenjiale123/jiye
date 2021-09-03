@@ -1,0 +1,148 @@
+<!--index.wxml-->
+<view class="container">
+
+	<view class="person">
+		<!-- <text>{{user.username}}</text>
+		<text>{{user.position}}</text>
+		<text>{{user.mobile}}</text>
+		<text>{{user.email}}</text>
+		<text>{{user.companyName}}</text>
+		<text>{{user.companyAddr}}</text>
+		<image src="{{user.header}}"></image>
+		<button bindtap="share">分享名片</button>
+		<view class="agree" bindtap="getAgree">
+			<image src="{{agree}}"></image> <text style="color:{{txtcolor}}">{{user.likesCount}}</text>
+		</view> -->
+
+
+		<image src="../../image/bj.png"></image>
+		<!-- <text>{{user.username}}的名片</text> -->
+		<view class="info">
+
+			<view class="avter">
+				<image bindtap="preview" data-img="{{user.header}}" src="{{user.header}}"></image>
+				<image src="../../image/logo.png"></image>
+			</view>
+
+			<view class="introdution">
+				<view class="top">
+					<view class="left">
+						<text>{{user.username}}</text>
+						<!-- 英文翻译 -->
+						<text>{{user.englishName}}</text>
+					</view>
+
+					<view class="right">
+						<text>{{user.position}}</text>
+						<!-- 英文翻译 -->
+						<text>{{user.englishPosition}}</text>
+					</view>
+				</view>
+
+				<view class="contact">
+					<view class="weight">
+						<text>Contact</text>
+						<text>{{user.mobile}}</text>
+					</view>
+					<view class="weight">
+						<text>E-mail</text>
+						<text>{{user.email}}</text>
+					</view>
+
+					<view class="weight">
+						<text>Add</text>
+						<text>{{user.companyAddr}}</text>
+					</view>
+				</view>
+
+				<view class="way">
+					<view class="img" bindtap="cardCode">
+						<image src="../../image/erweicode.png"></image>
+
+						<text class="etc2">名片码</text>
+					</view>
+
+					<view class="img" bindtap="freeTell">
+						<image src="../../image/phone.png"></image>
+						<text>拨打电话</text>
+					</view>
+					<view class="img">
+						<cell bind:startmessage='startmessage' bind:completemessage="completemessage" plugid='{{user.qiweiId}}' styleType='2'   bubbleColor="DDE0E6" color='DDE0E6' class="main"/>
+						<image src="../../image/wechat.png" class="etc" ></image>
+						<text class="etc1">添加企微</text>
+					</view>
+				</view>
+				<view class="float">
+					<view class="left" bindtap="share">
+						<image src="../../image/share.png"></image>
+						<view class="txt">
+							<text>名片分享</text>
+							<text>Business card share</text>
+
+						</view>
+					</view>
+					<view class="right" bindtap="savePhone">
+						<image src="../../image/down.png"></image>
+						<view class="txt">
+							<text>保存到通讯录</text>
+							<text>Save to address book</text>
+
+						</view>
+					</view>
+				</view>
+			</view>
+
+
+		</view>
+	</view>
+
+
+	<view class="agreeTime">
+
+		<view class="title">
+
+			<text>点赞次数</text>
+			<text>Thumb up number</text>
+		</view>
+		<view class="agreeNum"  bindtap="getAgree">
+			<image src="../../image/userList.png"></image>
+			<text>+{{user.likesCount}} </text>
+		</view>
+	</view>
+
+	<view class="personal">
+		<view class="title">
+
+			<text>个人介绍</text>
+			<text>Introduce</text>
+		</view>
+		<view class="article">
+
+	  <audio hidden="{{user.voice==null || ''}}" src="{{user.voice}}"  id="myAudio" controls='true' class="audio" poster="{{videoSrc}}" name="个人介绍"    bindtap='audioClick'  author="{{user.username}}"  bindended="end"></audio>
+
+			<text>{{user.introduce}}</text>
+
+		</view>
+
+	</view>
+	<view class="company">
+		<view class="title">
+
+			<text>关于公司</text>
+			<text>About the company</text>
+		</view>
+		<view class="article">
+			<text>{{user.companyAbout}}</text>
+
+		</view>
+
+	</view>
+
+
+
+	<!-- <view class="action">
+		<button bindtap="freeTell">拨打电话</button>
+		<cell bind:startmessage='startmessage' bind:completemessage="completemessage" plugid='c5be23c56ac0d3ed15e6d761c3510359' buttonText='1' />
+	</view> -->
+
+</view>

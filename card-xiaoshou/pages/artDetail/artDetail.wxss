@@ -1,0 +1,85 @@
+/* pages/artDetail/artDetail.wxss */
+.videoStyle {
+  width: 94%;
+  height: 450rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin:0 auto;
+  display: block;
+  margin-top: 30rpx;
+}
+
+.controls {
+  z-index: 1;
+  top: 0;
+    position:absolute;
+    
+}
+
+.play {
+  position:absolute;
+  left: 50%;
+  margin-top: -291rpx;
+  margin-left: -80rpx;
+}
+.contain{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+}
+.article{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 72rpx;
+}
+.title{
+  font-size: 42rpx;
+  font-family: PingFang SC;
+  font-weight: 800;
+  color: #2E2E2E;
+  display: block;
+}
+.time{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 24rpx;
+}
+.time>image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.time>text{
+  font-size: 22rpx;
+font-family: PingFang SC;
+font-weight: 800;
+color: #2E2E2E;
+margin-left: 6rpx;
+vertical-align: middle;
+}
+.txt{
+  margin-top: 54rpx;
+  font-size: 26rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #2E2E2E
+}
+.item>image{
+  width: 100%;
+  /* height: 100%; */
+  margin-top: 20rpx;
+}
+.item{
+  margin-top: 20rpx;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding:  0 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+}
+
+

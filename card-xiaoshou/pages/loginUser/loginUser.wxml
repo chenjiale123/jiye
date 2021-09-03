@@ -1,0 +1,32 @@
+<!--pages/loginUser/loginUser.wxml-->
+<!-- <view class="contain">
+
+  <view class="logo">
+  <image src="../../image/login@2x.png" ></image>
+
+  </view>
+
+  <view class="loginBtn">
+    <view class="remain">
+  
+      <text>请完成微信授权以继续使用</text>
+    </view>
+    
+   <button class="wx"open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"   hover-class="none">
+
+   <text>授权微信用户信息</text></button>
+
+  </view>
+ 
+
+                            
+
+</view> -->
+<image src="../../image/bj.jpg" class="all"></image>
+<view class="contain">
+
+
+
+  <button  class="button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"   hover-class="none">  <image src="../../image/wx.png" class="btnimg"></image>
+   <text class="btntxt">授权微信用户信息</text>  </button >
+</view>

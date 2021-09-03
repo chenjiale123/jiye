@@ -1,0 +1,32 @@
+<!--pages/artDetail/artDetail.wxml-->
+<view class="contain">
+	<view class="article">
+			<text class="title">{{id.title}}</text>
+			<view class="time">
+				<image src="../../image/time.png"></image>
+				<text>发布时间：{{id.createTime}}</text>
+			</view>
+	
+
+		</view>
+			<video show-center-play-btn='false' objectFit='cover' id="myVideo" poster="{{bannerlist[0].resource}}" class="videoStyle pr" src="{{videoUrl}}" wx:if="{{videoUrl!==''&&videoUrl!==null}}"></video> <!-- 视频-->
+		<view style="display: {{tab_image}};" wx:if="{{videoUrl!==''}}">		</view>
+	<scroll-view class="item" wx:for="{{detailList}}">
+
+
+	
+	
+			<!-- <cover-view class="controls pa" id="controls">
+			
+				<cover-image src="{{bannerlist[0].resource}}" style='height:455rpx;' />
+			</cover-view> -->
+			<!-- 中间的播放图片标志 -->
+			<!-- <cover-view class="play pa" style="z-index:200;" bindtap="videoPlay">
+				<cover-image bindtap="bindplay" data-id="1" src="../../image/play.png" style="width:160rpx;" mode="widthFix" />
+			</cover-view> -->
+
+   
+				<text class="txt" wx:if="{{item.type==1}}">{{item.resource}}</text>
+		<image wx:if="{{item.type==2}}" src="{{item.resource}}" data-src='{{item.resource}}' mode='widthFix' lazy-load="true" bindtap="priview"></image>
+	</scroll-view>
+</view>

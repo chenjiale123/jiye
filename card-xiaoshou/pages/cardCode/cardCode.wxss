@@ -1,0 +1,53 @@
+/* pages/cardCode/cardCode.wxss */
+.contain{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.card{
+  width: 100%;
+  text-align: center;
+  
+}
+.card>text:nth-child(1){
+  font-size: 58rpx;
+font-family: Source Han Sans CN;
+font-weight: bold;
+color: #444444;
+display: block;
+margin-top: 163rpx;
+}
+.card>text:nth-child(2){
+  font-size: 37rpx;
+font-family: Montserrat;
+font-weight: 300;
+color: rgba(68, 68, 68, 0.75);
+display: block;
+margin-top: 16rpx;
+}
+.card>text:nth-child(3){
+  font-size: 41rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #444444;
+display: block;
+margin-top: 64rpx;
+}
+.card>text:nth-child(4){
+  font-size: 34rpx;
+font-family: Montserrat;
+font-weight: 300;
+color: rgba(68, 68, 68, 0.75);
+display: block;
+margin-top: 16rpx;
+}
+.gs>text{
+  margin-top: 58rpx;
+  text-align: center;
+  display: block;
+}
+image{
+  margin-top: 67rpx;
+  width: 530rpx;
+  height: 560rpx;
+}

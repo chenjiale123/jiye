@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cell": "plugin://contactPlugin/cell"
+   },
+  "navigationBarTitleText": "名片"
+  
+}

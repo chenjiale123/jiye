@@ -1,0 +1,349 @@
+.container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #F9F7F8;
+}
+.person{
+  width: 100%;
+  height: 1200rpx;
+ position: relative;
+ text-align: center;
+}
+.person>image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.person>text{
+text-align: center;
+ margin-top: 70rpx;
+  font-size: 34rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #444444;
+z-index: 9999999;
+position: relative;
+/* top: 60rpx; */
+
+}
+.info{
+  z-index: 9999999;
+  position: relative;
+}
+.avter{
+  width: 100%;
+  height: 224rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.avter>image:nth-child(1){
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  left: 50rpx;
+  border-radius: 50%;
+
+}
+.avter>image:nth-child(2){
+  width: 202rpx;
+  height: 72rpx;
+  margin-right: 52rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 112rpx;
+}
+.introdution{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+ margin-top: 50rpx;
+}
+.top{
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 auto;
+}
+.top>.left>text:nth-child(1){
+
+  font-size: 34rpx;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #444444;
+  display: block;
+  text-align: left;
+}
+.top>.left>text:nth-child(2){
+  font-size: 22rpx;
+font-family: Montserrat;
+font-weight: 300;
+color: rgba(68, 68, 68, 0.75);
+display: block;
+text-align: left;
+}
+.top>.right{
+  margin-left: 90rpx;
+  text-align: left;
+}
+.top>.right>text:nth-child(1){
+
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #444444;
+  text-align: left;
+}
+.top>.right>text:nth-child(2){
+  font-size: 22rpx;
+font-family: Montserrat;
+font-weight: 300;
+color: rgba(68, 68, 68, 0.75);
+display: block;
+text-align: left;
+}
+.contact{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  height: auto;
+  overflow: hidden;
+}
+.weight{
+  margin-top: 38rpx;
+  text-align: left;
+}
+.weight>text:nth-child(1){
+  font-size: 20rpx;
+  font-family: Montserrat;
+  font-weight: 600;
+  color: rgba(34, 34, 34, 0.75);
+  display: block;
+}
+.weight>text:nth-child(2){
+  font-size: 34rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #444444;
+margin-top: 17rpx;
+}
+.way{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 52rpx;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.way>.img{
+  margin-right: 57rpx;
+  position: relative;
+  width: 90rpx;
+  height: 104rpx;
+}
+.way>.img>image{
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+}
+
+.cell--bubble{
+  /* width: 30rpx!important;
+  height: 30rpx!important; */
+ /* visibility: hidden; */
+ opacity: 0;
+ z-index:99999999999999999999999999999999 ;
+ position: relative;
+ background-color: rgba(0,0,0,0)!important;
+}
+.bubble{
+  background-color: rgba(0,0,0,0)!important;
+}
+.etc{
+  position: absolute;
+  top: -10rpx;
+  left: -10rpx;
+  pointer-events: none;
+  width: 80rpx!important;
+  height: 80rpx!important;
+}
+.etc1{
+  position: absolute;
+  bottom: 0;
+  width: 90rpx;
+  left: -16rpx!important;
+  z-index: 9999;
+  pointer-events: none;
+}
+.etc2{
+  position: absolute;
+  bottom: 0;
+  width: 90rpx;
+  left: -16rpx!important;
+   z-index: 9999;
+}
+.way>.img>text{
+  font-size: 22rpx;
+font-family: PingFang SC;
+font-weight: 800;
+color: #444444;
+position: absolute;
+left: -8rpx;
+bottom: 0;
+}
+.float{
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 45rpx;
+  height: 148rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.float>.left{
+  padding:  40rpx 60rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 20rpx 0  0   20rpx ;
+}
+.float>.left>image{
+  width: 52rpx;
+  height: 52rpx;
+}
+.float>.left>.txt{
+  display: inline-block;
+  margin-left: 15rpx;
+}
+.float>.left>.txt>text:nth-child(1){
+  display: block;
+  font-size: 30rpx;
+font-family: PingFang SC;
+font-weight: 800;
+color: #222222;
+text-align: left;
+}
+.float>.left>.txt>text:nth-child(2){
+  display: block;
+  font-size: 14rpx;
+  font-family: Montserrat;
+  font-weight: 300;
+  color: rgba(34, 34, 34, 0.75);
+  text-align: left;
+}
+
+
+.float>.right{
+  padding:  40rpx 60rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #3467FF;
+  border-radius:  0  20rpx 20rpx 0 ;
+}
+.float>.right>image{
+  width: 52rpx;
+  height: 52rpx;
+}
+.float>.right>.txt{
+  display: inline-block;
+  margin-left: 15rpx;
+}
+.float>.right>.txt>text:nth-child(1){
+  display: block;
+  font-size: 30rpx;
+font-family: PingFang SC;
+font-weight: 800;
+color: #fff;
+text-align: left;
+}
+.float>.right>.txt>text:nth-child(2){
+  display: block;
+  font-size: 14rpx;
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #fff;
+  text-align: left;
+}
+
+.agreeTime{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+}
+.title{
+  width: 100%;
+  height: 80rpx;
+  background-color: #ccc;
+  padding:  0 60rpx;
+  box-sizing: border-box;
+  line-height: 80rpx;
+}
+.title>text:nth-child(1){
+  font-size: 30rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #444444;
+opacity: 0.5;
+}
+
+.title>text:nth-child(2){
+  font-size: 32rpx;
+  font-family: Catamaran;
+  font-weight: bold;
+color: #444444;
+margin-left: 22rpx;
+opacity: 0.5;
+}
+.agreeNum{
+  width: 100%;
+  height: 210rpx;
+  background-color: #F9F7F8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.agreeNum>image{ 
+  width: 444rpx;
+  height: 115rpx;
+}
+.agreeNum>text{
+  width: 112rpx;
+height: 112rpx;
+background: #3467FF;
+border-radius: 50%;
+font-size: 35rpx;
+font-family: Montserrat;
+font-weight: 500;
+color: #FFFFFF;
+text-align: center;
+line-height: 112rpx;
+}
+.article{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding:  40rpx 60rpx;
+  box-sizing: border-box;
+}
+.article>text{
+  font-size: 26rpx;
+font-family: PingFang SC;
+font-weight: 500;
+color: #363636;
+margin-top: 20rpx;
+display: block;
+}
+.audio{
+  width: 300rpx;
+  height: 70rpx;
+}

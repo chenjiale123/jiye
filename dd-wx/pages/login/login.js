@@ -118,10 +118,12 @@ Page({
       wx.request({
         url: api.baseUrl+'/user/code/' + this.data.acount1, //获取图片的URL
         method: "get",
-        responseType: 'arraybuffer',
+
         success(res) {
           console.log(res)
-          let url = 'data:image/png;base64,' + wx.arrayBufferToBase64(res.data)
+          var     base64Data = wx.arrayBufferToBase64(wx.base64ToArrayBuffer(res.data.data));
+          console.log(res)
+          let url = 'data:image/png;base64,' +base64Data
           that.setData({
             codeUrl: url, //设置data里面的图片url
 
@@ -146,10 +148,12 @@ Page({
       wx.request({
         url:api.baseUrl+ '/user/code/' + this.data.acount1, //获取图片的URL
         method: "get",
-        responseType: 'arraybuffer',
+    
         success(res) {
+          console.log(res.data)
+          var     base64Data = wx.arrayBufferToBase64(wx.base64ToArrayBuffer(res.data.data));
           console.log(res)
-          let url = 'data:image/png;base64,' + wx.arrayBufferToBase64(res.data)
+          let url = 'data:image/png;base64,' +base64Data
           that.setData({
             codeUrl: url, //设置data里面的图片url
 

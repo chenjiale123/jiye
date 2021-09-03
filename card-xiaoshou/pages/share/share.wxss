@@ -1,0 +1,28 @@
+.share-image {
+  width: 750rpx;
+  height: 1200rpx;
+  
+  /* border: 1px solid black; */
+}
+
+button {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ display: block;
+width: 750rpx!important;
+height: 97rpx;
+background: #FFFFFF;
+font-size: 32rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #000000;
+line-height: 99rpx;
+box-shadow: 0px 0px 10px 0px rgba(12, 3, 7, 0.11);
+}
+.save{
+  width: 44rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}

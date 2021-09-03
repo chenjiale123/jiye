@@ -1,0 +1,41 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/24 下午2:17:11 
+使用方法：
+1. 在"pages\article\article.wxml"中使用`include`指令引入此模板，
+2. 在"pages\article\article.wxss"中使用`import`指令引入"pages\article\article.skeleton.wxss"
+3. 书写对应的逻辑，来控制骨架屏的显示与隐藏
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<view class="sk-container">
+  <view class="container">
+    <view class="video" style="height: 249px">
+      <view controls="true" class="videostyle sk-transparent sk-text--Infinity-670 sk-text sk-image" custom-cache="true" id="myVideo" object-fit="cover" poster="https://jileaf.oss-cn-hangzhou.aliyuncs.com/image/videofimg.jpg" show-center-play-btn="true"
+        src="https://jileaf.oss-cn-hangzhou.aliyuncs.com/video/20200718%E5%8F%91%E5%B8%83%E4%BC%9A%E8%8A%B1%E7%B5%AE%20.mp4" style="height: 249px; background-size: 9.99396% 0rem;" unit-id="true">00:56</view>
+      <view style="display: ;"></view>
+    </view>
+    <view class="include" style="overflow: auto; z-index: 9; width: 100%; height: 66px; line-height: 60px; background: rgb(255, 255, 255); border: none; box-sizing: border-box;">
+      <view class="tabNav" style="width:469px">
+        <view data-id="[object Object]" data-idx="0"><text class="sk-transparent sk-text-38-3333-957 sk-text" style="background-size: 100% 3.75rem; background-position-x: 50%;">解决方案</text></view>
+        <view data-id="[object Object]" data-idx="1" class="cur"><text class="sk-transparent sk-text-38-3333-289 sk-text" style="border: none; background-size: 100% 3.75rem; background-position-x: 50%;">客户案例</text></view>
+        <view data-id="[object Object]" data-idx="2"><text class="sk-transparent sk-text-38-3333-447 sk-text" style="background-size: 100% 3.75rem; background-position-x: 50%;">检测报告</text></view>
+        <view data-id="[object Object]" data-idx="3"><text class="sk-transparent sk-text-38-3333-807 sk-text" style="background-size: 100% 3.75rem; background-position-x: 50%;">行业报告</text></view>
+        <view data-id="[object Object]" data-idx="4"><text class="sk-transparent sk-text-38-3333-445 sk-text" style="background-size: 100% 3.75rem; background-position-x: 50%;">集团新闻</text></view>
+      </view>
+    </view>
+    <scroll-view class="orderInfo">
+      <view class="orderInfo-item" data-id="[object Object]">
+        <image lazy-load="true" mode="widthFix" style="height: 254.667px;" class="sk-image"></image>
+        <view class="discrabe"><text class="sk-transparent sk-text-14-2857-682 sk-text" style="background-size: 99.9692% 2.0125rem; background-position-x: 50%;">吉叶生物儿童健康手护计划-植树节</text><text class="sk-transparent sk-text-14-2857-785 sk-text" style="background-size: 23.474% 1.3125rem; background-position-x: 50%;">2021-03-12</text></view>
+      </view>
+      <view class="orderInfo-item" data-id="[object Object]">
+        <image lazy-load="true" mode="widthFix" style="height: 206.375px;" class="sk-image"></image>
+        <view class="discrabe"><text class="sk-transparent sk-text-14-2857-222 sk-text" style="background-size: 100% 2.0125rem; background-position-x: 50%;">吉叶生物助力新疆</text><text class="sk-transparent sk-text-14-2857-711 sk-text" style="background-size: 45.2955% 1.3125rem; background-position-x: 50%;">2020-06-03</text></view>
+      </view>
+      <view class="orderInfo-item" data-id="[object Object]">
+        <image lazy-load="true" mode="widthFix" style="height: 215.673px;" class="sk-image"></image>
+        <view class="discrabe"><text class="sk-transparent sk-text-14-2857-188 sk-text" style="background-size: 100% 2.0125rem; background-position-x: 50%;">吉叶生物助力杭州胜利幼儿园晨检手消</text><text class="sk-transparent sk-text-14-2857-637 sk-text" style="background-size: 21.8177% 1.3125rem; background-position-x: 50%;">2020-05-13</text></view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

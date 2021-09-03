@@ -276,7 +276,79 @@
           </el-form-item>
         </el-form>
       </el-tab-pane>
+
+      <el-tab-pane label="更改流量" name="seventh">
+        <el-form ref="form6" :model="form6" label-width="80px">
+          <!-- <el-form-item label="账号" prop="username">
+            <el-input v-model="form5.username" type="string"></el-input>
+          </el-form-item> -->
+          <el-form-item label="设备号" prop="sdrid">
+            <el-input v-model="form6.sdrid" type="string"></el-input>
+          </el-form-item>
+
+          <el-form-item>
+            <el-button type="primary" @click="onSubmit6()">查询详情</el-button>
+             <el-button type="primary" @click="onSubmitflow()">查询流量</el-button>
+          </el-form-item>
+        </el-form>
+
+        <el-card v-if='sevice.sn'>
+          <div class="card">
+            <div class="left">
+              <p>设备号：{{ sevice.sn }}</p>
+              <p>sim卡号：{{ sevice.simNum }}</p>
+                 <p>学校：{{ sevice.schoolName }}</p>
+              <p>客户端流量：{{ sevice.clientFlow }}</p>
+                  <p>服务端流量：{{ sevice.serverFlow }}</p>
+              <p>当前使用次数：{{ sevice.usageCount }}</p>
+              <p>创建时间：{{ sevice.createTime }}</p>
+              <p>更新时间：{{ sevice.updateTime }}</p>
+              <p>地理位置：{{ sevice.address }}</p>
+            </div>
+            <div class="right">
+              <span @click="detailSer">历史记录</span>
+                <span @click="changeLiu">更改流量</span>
+            </div>
+          </div>
+        </el-card>
+      </el-tab-pane>
     </el-tabs>
+
+   <el-dialog
+  title="提示"
+  :visible.sync="dialogVisible"
+  width="50%"
+  :before-close="handleClose">
+   
+   <div class="history">
+    
+
+     
+   
+
+    <el-form ref="form7" :model="form7" label-width="250px" :rules="rules7">
+          <!-- <el-form-item label="账号" prop="username">
+            <el-input v-model="form5.username" type="string"></el-input>
+          </el-form-item> -->
+          <el-form-item label="儿童流量设置" prop="AdlteditVage">
+                  <el-input placeholder="请输入修改的儿童流量设置" @change="changemore" v-model="form7.AdlteditVage" style="width:70%"> </el-input>
+          </el-form-item>
+
+  <el-form-item label="成人流量设置" prop="ChaildeditVage">
+                  <el-input placeholder="请输入修改的成人流量"  @change="changemore1" v-model="form7.ChaildeditVage" style="width:70%"> </el-input>
+          </el-form-item>
+
+            <el-form-item label="医护流量设置" prop="doctoreditVage">
+                  <el-input placeholder="请输入修改的医护流量" v-model="form7.DoctoreditVage" style="width:70%"> </el-input>
+          </el-form-item>
+          <el-form-item>
+             <el-button type='primary' @click="changeVage"> 修改</el-button>
+          </el-form-item>
+        </el-form>
+
+   </div>
+</el-dialog>
+
   </div>
 </template>
 
@@ -285,6 +357,13 @@
 export default {
   data() {
     return {
+      form7:{
+AdlteditVage:'',
+ChaildeditVage:'',
+DoctoreditVage:''
+      },
+
+      dialogVisible:false,
       show: 0,
       hidden: false,
       dataList: [],
@@ -327,6 +406,9 @@ export default {
       form4: {
         username: "",
       },
+      form6: {
+        sdrid: "",
+      },
       rules1: {},
       rules: {
         accont: [
@@ -359,10 +441,35 @@ export default {
           },
         ],
       },
+       rules7: {
+        AdlteditVage: [
+          {
+            required: true,
+            message: "流量不能为空",
+            trigger: "blur",
+          },
+        ],
+       ChaildeditVage : [
+          {
+            required: true,
+            message: "流量不能为空",
+            trigger: "blur",
+          },
+        ],
+        DoctoreditVage: [
+          {
+            required: true,
+            message: "流量不能为空",
+            trigger: "blur",
+          },
+        ],
+       },
       options1: [],
       options2: [],
       options3: [],
       tableData: [],
+      sevice: {},
+      hislist:[],
       options4: [
         {
           value: "1",
@@ -378,8 +485,49 @@ export default {
   created() {
     this.getpro();
     this.getuser();
+   let searchKeyword = localStorage.getItem('key')
+        console.log(searchKeyword)
+    if(searchKeyword!==undefined || !searchKeyword){
+           this.activeName='second'
+        
+    }else{
+   this.activeName=searchKeyword
+    }
+ 
+  
+   
   },
   methods: {
+    changemore(e){
+          console.log(e)
+          // var { value } = e.target;
+      
+          if(e>600){
+            this.$message('流量值不能大于600')
+            this.form7.AdlteditVage=600
+          }
+    },
+      changemore1(e){
+           if(e>600){
+            this.$message('流量值不能大于600')
+            this.form7.ChaildeditVage=600
+          }
+    },
+    handleClose(){
+    this.dialogVisible=false
+    },
+    changeLiu(){
+    this.dialogVisible=true
+    this.form7.AdlteditVage= this.sevice.serverFlow.split('_')[0]
+       this.form7.ChaildeditVage= this.sevice.serverFlow.split('_')[1]
+         this.form7.DoctoreditVage= this.sevice.serverFlow.split('_')[2]
+    },
+    detailSer(){
+    //   this.dialogVisible=true
+    //  this.getHis()
+    console.log(this.activeName)
+    this.$router.push({name:'history',params:{id:this.form6.sdrid,route:this.activeName}})
+    },
     changeType(e) {
       console.log(e);
       this.hidden = true;
@@ -402,7 +550,7 @@ export default {
     },
     handleDelete(index, row) {
       console.log(index, row);
-      this.$post("http://192.168.10.18:8080/user/manager/delete", {
+      this.$post("https://www.jileaf.top/user/manager/delete", {
         username: row.username,
       })
         .then((res) => {
@@ -430,7 +578,7 @@ export default {
     onSubmit(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$post("http://192.168.10.18:8080/user/manager/register", {
+          this.$post("https://www.jileaf.top/user/manager/register", {
             username: this.form.accont,
             nickname: this.form.nickname,
             password: this.form.psd,
@@ -470,7 +618,7 @@ export default {
     onSubmit1(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$post("http://192.168.10.18:8080/user/manager/dispatchRole", {
+          this.$post("https://www.jileaf.top/user/manager/dispatchRole", {
             username: this.form1.accont1,
             province: this.form1.value1,
             city: this.form1.value2,
@@ -507,7 +655,7 @@ export default {
     onSubmit2(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$post("http://192.168.10.18:8080/user/manager/update", {
+          this.$post("https://www.jileaf.top/user/manager/update", {
             oldUsername: this.form2.oldUsername,
             newUsername: this.form2.newUsername,
             domain: "",
@@ -541,7 +689,7 @@ export default {
     onSubmit3(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$post("http://192.168.10.18:8080/wxapp/company", {
+          this.$post("https://www.jileaf.top/wxapp/company", {
             name: this.form3.company,
             address: this.form3.address,
           })
@@ -570,7 +718,7 @@ export default {
     },
     onSubmit4() {
       console.log(this.form5);
-      this.$get("http://192.168.10.18:8080/wxapp/qb/" + this.form5.sdrid)
+      this.$get("https://www.jileaf.top/wxapp/qb/" + this.form5.sdrid)
         .then((res) => {
           console.log(res);
           if (res.data !== null) {
@@ -584,7 +732,7 @@ export default {
         });
     },
     onSubmit5(formName) {
-      this.$get("http://192.168.10.18:8080/wxapp/unbind/" + this.form5.sdrid)
+      this.$get("https://www.jileaf.top/wxapp/unbind/" + this.form5.sdrid)
         .then((res) => {
           console.log(res);
           if (res.code == 200) {
@@ -598,13 +746,55 @@ export default {
           console.log(err);
         });
     },
+    onSubmit6() {
+      this.$get("https://www.jileaf.top/hm/info/" + this.form6.sdrid)
+        .then((res) => {
+          console.log(res);
+          if (res.code == 200) {
+            this.sevice = res.data;
+          } else {
+            this.$message("查询失败");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    onSubmitflow(){
+  this.$post('http://www.jileaf.top:8080/hm/iotcard/'+this.form6.sdrid)
+        .then((res) => {
+          console.log(res);
+          if (res.code == 200) {
+              
+          } else {
+            this.$message("查询失败");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getHis(){
+      this.$get("https://www.jileaf.top/hm/history/" + this.form6.sdrid)
+        .then((res) => {
+          console.log(res);
+          if (res.code == 200) {
+             this.hislist=res.data
+          } else {
+            this.$message("查询失败");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    
+    },
     change1(e) {
       console.log(e);
 
       this.$get(
-        "https://restapi.amap.com/v3/config/district?keywords=" +
-          e +
-          "&key=fc99f5ab80dd95d76bcbd32579c47a35"
+          'http://www.jileaf.top:8080/wxapp/amap/'+
+          e 
       ).then((res) => {
         console.log(res);
         this.options2 = res.districts[0].districts;
@@ -614,17 +804,37 @@ export default {
       console.log(e);
 
       this.$get(
-        "https://restapi.amap.com/v3/config/district?keywords=" +
-          e +
-          "&key=fc99f5ab80dd95d76bcbd32579c47a35"
+        'http://www.jileaf.top:8080/wxapp/amap/'+
+          e 
+        
       ).then((res) => {
         console.log(res);
         this.options3 = res.districts[0].districts;
       });
     },
+    changeVage(){
+         this.$post(
+        "https://www.jileaf.top/hm/flow" ,{
+          sn:this.form6.sdrid,
+          flow:this.form7.AdlteditVage+'_'+this.form7.ChaildeditVage+'_'+this.form7.DoctoreditVage
+        }
+          
+      ).then((res) => {
+      
+        console.log(res);
+        if(res.code==200){
+               this.$message("修改成功");
+               this.dialogVisible=false
+               this.onSubmit6()
+        }else{
+
+        }
+      
+      });
+    },
     getpro() {
       this.$get(
-        "https://restapi.amap.com/v3/config/district?keywords=中国&key=fc99f5ab80dd95d76bcbd32579c47a35"
+        "http://www.jileaf.top:8080/wxapp/amap/中国"
       ).then((res) => {
         console.log(res);
         this.options1 = res.districts[0].districts;
@@ -633,7 +843,7 @@ export default {
 
     getuser() {
       this.$get(
-        "http://192.168.10.18:8080/user/manager/page/" +
+        "https://www.jileaf.top/user/manager/page/" +
           this.query.pageNum +
           "/" +
           this.query.pageSize
@@ -650,11 +860,49 @@ export default {
       this.getuser();
     },
   },
+  mounted(){
+      var that=this
+ window.addEventListener('beforeunload', e => {
+   console.log('2222222222')
+     localStorage.setItem('key', that.activeName)
+});
+  },
+
+  onUnload(){
+     localStorage.setItem('key', '')
+
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.history{
+  height: 280px;
+  overflow: auto;
+}
+.history>.item{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(90, 90, 90);
+}
+.el-card__body{
+    width: 90%;
+  margin: 0 auto;
+}
+.card{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card>.right>span{
+  color: rgba(55, 159, 255, 1);
+  font-size: 18px;
+  cursor: pointer;
+}
 .head {
   width: 100%;
   height: 50px;

@@ -1,0 +1,19 @@
+<!--pages/cardCode/cardCode.wxml-->
+<view class="contain">
+<view class="card">
+
+		<text>{{user.username}}</text>
+						<!-- 英文翻译 -->
+						<text>{{user.englishName}}</text>
+            			<text>{{user.position}}</text>
+						<!-- 英文翻译 -->
+						<text>{{user.englishPosition}}</text>
+</view>
+
+   <image src="{{code}}"></image>
+
+ <view class="gs">
+ <text>浙江吉叶生物科技有限公司</text>
+
+ </view>
+</view>
